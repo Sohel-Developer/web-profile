@@ -1,0 +1,41 @@
+[debug] [2024-05-10T17:12:46.229Z] ----------------------------------------------------------------------
+[debug] [2024-05-10T17:12:46.232Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-10T17:12:46.233Z] CLI Version:   13.8.3
+[debug] [2024-05-10T17:12:46.233Z] Platform:      win32
+[debug] [2024-05-10T17:12:46.233Z] Node Version:  v20.5.0
+[debug] [2024-05-10T17:12:46.234Z] Time:          Fri May 10 2024 23:12:46 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-05-10T17:12:46.234Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-10T17:12:46.333Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-10T17:12:46.334Z] > authorizing via signed-in user (sohel.webdevoloper@gmail.com)
+[debug] [2024-05-10T17:12:46.334Z] [iam] checking project sohel-developer for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-10T17:12:46.337Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sohel-developer:testIamPermissions [none]
+[debug] [2024-05-10T17:12:46.337Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sohel-developer:testIamPermissions x-goog-quota-user=projects/sohel-developer
+[debug] [2024-05-10T17:12:46.337Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sohel-developer:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-10T17:12:48.011Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sohel-developer:testIamPermissions 200
+[debug] [2024-05-10T17:12:48.012Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sohel-developer:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-10T17:12:48.014Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sohel-developer [none]
+[debug] [2024-05-10T17:12:48.535Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sohel-developer 200
+[debug] [2024-05-10T17:12:48.536Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sohel-developer {"projectId":"sohel-developer","projectNumber":"914046292190","displayName":"sohel-developer","name":"projects/sohel-developer","resources":{"hostingSite":"sohel-developer"},"state":"ACTIVE","etag":"1_f5e89edd-a605-4f02-a1b0-8c688b3f24f7"}
+[info] 
+[info] === Deploying to 'sohel-developer'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-10T17:12:48.552Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sohel-developer/versions [none]
+[debug] [2024-05-10T17:12:48.553Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sohel-developer/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-10T17:12:50.233Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sohel-developer/versions 200
+[debug] [2024-05-10T17:12:50.233Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sohel-developer/versions {"name":"projects/914046292190/sites/sohel-developer/versions/0b8c8ab84d77d533","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[sohel-developer]: beginning deploy... 
+[debug] [2024-05-10T17:12:50.386Z] Error: EPERM: operation not permitted, scandir 'C:/Users/Sohel Rana/Desktop/portfolio-website/.next/trace'
+    at Object.readdirSync (node:fs:1543:3)
+    at GlobSync._readdir (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Sohel Rana\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
